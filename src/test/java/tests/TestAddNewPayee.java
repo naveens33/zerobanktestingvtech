@@ -37,7 +37,7 @@ public class TestAddNewPayee extends BaseTest {
     @Test(dataProvider = "dataProvider1")
     public void testAddNewPayee(String name, String address, String account, String details){
         extentTest = report.createTest("Add New Payee for test data "+name);
-        extentTest.log(Status.INFO,"Test Data are: "+name+" "+address+" "+account+" "+details);
+        extentTest.log(Status.INFO,"Test Data is: "+name+" "+address+" "+account+" "+details);
         PayBillsPage payBillsPage = new PayBillsPage(driver);
         payBillsPage.doAddPayee(name, address, account, details);
     }
